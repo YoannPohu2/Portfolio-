@@ -16,7 +16,6 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color: #4d4d4d;
-  background: #fff;
 }
 
 #page {
@@ -1288,5 +1287,32 @@ input[type="text"] {
 .js .animate-box {
   opacity: 0;
 }
+.carousel-container {
+  width: 80%;
+  overflow: hidden;
+  position: relative;
+}
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.module {
+  background: white;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+.grade {
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.grade.D { background-color: red; color: white; }
+.grade.C { background-color: orange; color: white; }
+.grade.B { background-color: yellow; color: black; }
+.grade.A { background-color: green; color: white; }
+
 
 /*# sourceMappingURL=style.css.map */
