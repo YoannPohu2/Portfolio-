@@ -7,7 +7,7 @@ const AboutMe = () => {
       <h1>Hello !</h1>
       <div className="text-left">
           <p>
-            Je m'appelle Yoann Pohu, j'ai 22 ans et je suis actuellement développeur web
+            Je m'appelle Yoann Pohu,j'ai 22 ans et je suis actuellement développeur web
             chargé de mission en alternance chez Electro Dépôt en deuxième année
             d’études. Formé en première année à la Web@cadémie d’Epitech à Lille. Durant
             cette formation, j'ai pu acquérir les bases de plusieurs langages de
