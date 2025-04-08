@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Card from "../components/Card";
+import Card from "../Components/Card";
 import { ThemeContext } from "../themeProvider";
 
 const Projects = () => {
