@@ -17,25 +17,38 @@ const Home = () => {
       style={{
         backgroundImage: `url('${darkMode ? cloud : cloudDark}')`,
         backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
-      <main
-        className="mx-auto max-w-7xl px-4 sm:px-6 md:mt-0 lg:px-8 flex flex-col md:flex-row items-center justify-center md:justify-between h-screen"
-        id="/"
-      >
-        <div className="sm:text-center lg:text-left">
-          <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+ 
+
+ <main
+  className="w-full px-4 md:px-20 mb-5 md:mb-0 pt-20 flex flex-col md:flex-row items-center justify-between min-h-screen"
+  id="/"
+>
+
+
+
+        {/* Texte à gauche */}
+        <div className="text-center md:text-left w-full md:w-1/2">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
             <motion.span
-              className={darkMode ? "block text-black" : " text-white"}
+              className={darkMode ? "block text-black" : "block text-white"}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
             >
               Hello, je suis Yoann
             </motion.span>
 
-            {/* Nouveau effet typewriter */}
-            <span className="text-blue-500 z-0 lg:inline whitespace-nowrap overflow-hidden">
+            <span className="text-blue-500 block mt-2 text-2xl sm:text-3xl md:text-4xl">
               <Typewriter
                 options={{
-                  strings: ["Développeur Front-End", "Développeur Full Stack", "Développeur Mobile"],
+                  strings: [
+                    "Développeur Front-End",
+                    "Développeur Full Stack",
+                    "Développeur Mobile",
+                  ],
                   autoStart: true,
                   loop: true,
                   delay: 80,
@@ -47,50 +60,54 @@ const Home = () => {
           </h1>
 
           <p
-            className={
-              darkMode
-                ? "mt-3 text-base text-black sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
-                : "mt-3 text-base text-white sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
-            }
+            className={`mt-6 text-base sm:text-lg md:text-xl max-w-xl mx-auto md:mx-0 ${
+              darkMode ? "text-black" : "text-white"
+            }`}
           >
-            Je suis développeur front-end/full-stack. Je travaille actuellement chez Electro dépôt en tant que développeur front-end.
+            Je suis développeur front-end/full-stack. Je travaille actuellement
+            chez Electro dépôt en tant que développeur front-end.
           </p>
 
-          <div className="flex md:justify-start">
+          {/* Réseaux sociaux */}
+          <div className="flex justify-center md:justify-start mt-8 gap-5">
             {contactLinks.map((el, index) => (
               <a
                 key={index}
                 href={el.link}
-                className="mr-5 cursor-pointer mt-8 hover:scale-125"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform hover:scale-125"
               >
-                <img alt={el.name} src={el.url} />
+                <img
+                  alt={el.name}
+                  src={el.url}
+                  className="w-6 h-6 sm:w-8 sm:h-8"
+                />
               </a>
             ))}
           </div>
 
-          <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-            <div className="mt-3 sm:mt-0 cursor-pointer w-1/2">
-              <Link className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 hover:bg-blue-200 md:py-4 md:text-lg md:px-10">
-                Resume
-              </Link>
-            </div>
+          {/* Bouton CV */}
+          <div className="mt-8 flex justify-center md:justify-start">
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="px-8 py-3 md:px-10 md:py-4 bg-blue-500 hover:bg-blue-400 text-white font-medium text-base md:text-lg rounded-md cursor-pointer transition"
+            >
+              Télécharger mon CV
+            </Link>
           </div>
         </div>
 
+        {/* Image à droite */}
         <motion.img
-          initial="hidden"
-          whileInView="visible"
-          variants={{
-            visible: {
-              y: 0,
-              opacity: 1,
-              transition: { type: "spring" },
-            },
-            hidden: { opacity: 1, y: 80 },
-          }}
+          initial={{ opacity: 0, y: 80 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ type: "spring" }}
           src={heroBg}
           alt="hero"
-          className="md:w-3/6 hidden sm:block"
+          className="w-full sm:w-3/4 md:w-2/4 lg:w-2/5 mt-10 md:mt-0 mx-auto"
         />
       </main>
     </div>
