@@ -9,7 +9,7 @@ const About = () => {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
 
-  const bgClass = darkMode ? "bg-white" : "bg-gray-900";
+  const bgClass = darkMode ? "bg-gray-50" : "bg-gray-900";
   const textClass = darkMode ? "text-gray-700" : "text-white";
 
   const categorizedStacks = categories.reduce((acc, category) => {

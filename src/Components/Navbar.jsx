@@ -37,9 +37,10 @@ const Navbar = () => {
 
   function toggleTheme() {
     if (darkMode === true) {
+      
       theme.dispatch({ type: "LIGHTMODE" });
     } else {
-      theme.dispatch({ type: "DARKMODE" });
+      theme.dispatch({ type: "LIGHTMODE" });
     }
   }
 
