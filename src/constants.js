@@ -8,8 +8,6 @@ export const techStack = [
   { name: "JavaScript", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", category: "frontend" },
   { name: "TypeScript", link: "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg", category: "frontend" },
   { name: "React", link: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg", category: "frontend" },
-  { name: "React Native", link: "https://pagepro.co/blog/wp-content/uploads/2020/03/react-native-logo-884x1024.png", category: "frontend" },
-  { name: "jQuery", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg", category: "frontend" },
 
   // 🧠 Backend
   { name: "PHP", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg", category: "backend" },
@@ -32,10 +30,7 @@ export const techStack = [
   { name: "Docker", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain.svg", category: "tools" },
   { name: "VS Code", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg", category: "tools" },
   { name: "Figma", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg", category: "tools" },
-  { name: "Postman", link: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg", category: "tools" },
   { name: "Trello", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg", category: "tools" },
-  { name: "Bash", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg", category: "tools" },
-  { name: "Postman", link: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg", category: "tools" },
 
 ];
 

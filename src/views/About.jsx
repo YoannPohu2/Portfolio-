@@ -34,7 +34,7 @@ const About = () => {
 
         {/* Texte à droite */}
         <div className="w-full lg:w-2/3 lg:pl-16">
-          <h2 className={`text-4xl font-bold mb-6 ${textClass}`}>⚡ About Me</h2>
+          <h2 className={`text-4xl font-bold mb-6 ${textClass}`}><span className="text-blue-500">A propos</span></h2>
           <p className={`text-lg mb-6 leading-relaxed ${textClass}`}>
             Hey! Je m'appelle <strong>Yoann Pohu</strong>, j'ai 22 ans et je suis passionné par l'informatique depuis mon plus jeune âge.
             Aujourd'hui, je suis développeur web en alternance chez Electro Dépôt, dans ma deuxième année d’études.

@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
-import Contact from "./views/Contact";
 import Navbar from "./Components/Navbar";
 import About from "./views/About";
 import Home from './views/Home'
-import Services from "./views/Parcours";
-import Projects from "./views/Projects";
+import Pacours from "./views/Parcours";
 import LoadingScreen from "./Components/LoadingScreen";
 import { ThemeProvider } from "./themeProvider";
 
@@ -23,9 +21,7 @@ function App() {
             <Navbar />
             <Home />
             <About />
-            <Services />
-            <Projects />
-            <Contact />
+            <Pacours />
           </div>
 
         ) : (

@@ -38,7 +38,7 @@ const Home = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
             >
-              Hello, je suis Yoann
+              Hello, I am <span className="text-blue-500">Yoann</span>
             </motion.span>
 
             <span className="text-blue-500 block mt-2 text-2xl sm:text-3xl md:text-4xl">

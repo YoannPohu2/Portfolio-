@@ -12,7 +12,7 @@ const Parcours = () => {
   const listColor = darkMode ? "text-gray-600" : "text-gray-300";
 
   return (
-    <section id="parcours" className={`py-20 ${bgClass}`}>
+    <section id="career" className={`py-20 min-h-screen ${bgClass}`}>
       <div className="max-w-6xl mx-auto px-6">
         <h2 className={`text-4xl font-bold text-center mb-16 ${textColor}`}>
           🎓 Mon Parcours
@@ -20,7 +20,9 @@ const Parcours = () => {
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Formation */}
-          <div className={`${cardBg} rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300`}>
+          <div
+            className={`${cardBg} rounded-lg shadow-lg p-6 transform transition duration-300 hover:scale-105 hover:shadow-xl`}
+          >
             <div className="flex items-center mb-4">
               <FaGraduationCap className="text-orange-500 text-2xl mr-3" />
               <h3 className={`text-2xl font-bold ${textColor}`}>Formations</h3>
@@ -34,7 +36,9 @@ const Parcours = () => {
           </div>
 
           {/* Expériences Pro */}
-          <div className={`${cardBg} rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300`}>
+          <div
+            className={`${cardBg} rounded-lg shadow-lg p-6 transform transition duration-300 hover:scale-105 hover:shadow-xl`}
+          >
             <div className="flex items-center mb-4">
               <FaBriefcase className="text-orange-500 text-2xl mr-3" />
               <h3 className={`text-2xl font-bold ${textColor}`}>Expériences Professionnelles</h3>
@@ -48,7 +52,9 @@ const Parcours = () => {
         </div>
 
         {/* Langues */}
-        <div className={`${cardBg} mt-16 rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300`}>
+        <div
+          className={`${cardBg} mt-16 rounded-lg shadow-lg p-6 transform transition duration-300 hover:scale-105 hover:shadow-xl`}
+        >
           <div className="flex items-center mb-4">
             <FaLanguage className="text-orange-500 text-2xl mr-3" />
             <h3 className={`text-2xl font-bold ${textColor}`}>Langues</h3>
