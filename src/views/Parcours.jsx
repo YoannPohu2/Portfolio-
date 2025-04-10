@@ -12,7 +12,7 @@ const Parcours = () => {
   const listColor = darkMode ? "text-gray-600" : "text-gray-300";
 
   return (
-    <section id="career" className={`py-20 min-h-screen ${bgClass}`}>
+    <section id="parcours" className={`py-20 min-h-screen ${bgClass}`}>
       <div className="max-w-6xl mx-auto px-6">
         <h2 className={`text-4xl font-bold text-center mb-16 ${textColor}`}>
           🎓 Mon Parcours

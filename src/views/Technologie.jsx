@@ -19,7 +19,7 @@ const Technologie = () => {
   }, {});
 
   return (
-    <div className={`${bgClass} py-20`}>
+    <div id="tech" className={`${bgClass} py-20`}>
       <div className="max-w-7xl mx-auto px-6">
         <h3 className="text-3xl font-semibold text-blue-500 mb-8">Technologies et outils</h3>
 
