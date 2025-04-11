@@ -1,44 +1,35 @@
 import React, { useContext } from "react";
 import heroBg from "../assets/webdev.svg";
 import Typewriter from "typewriter-effect";
-import { contactLinks } from "../constants";
+import { networkLinks } from "../network"; // ou "../constants/network" selon ton dossier
 import { ThemeContext } from "../themeProvider";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
-import cloud from "../assets/cloudBg.png";
-import cloudDark from "../assets/cloudDark.png";
 
 const Home = () => {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
 
+  const bgClass = darkMode ? "bg-gray-50" : "bg-gray-900";
+  const textClass = darkMode ? "text-gray-700" : "text-white";
+  const subTextClass = darkMode ? "text-gray-500" : "text-gray-300";
+
   return (
-    <div
-      style={{
-        backgroundImage: `url('${darkMode ? cloud : cloudDark}')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
- 
-
- <main
-  className="w-full px-4 md:px-20 mb-5 md:mb-0 pt-20 flex flex-col md:flex-row items-center justify-between min-h-screen"
-  id="/"
->
-
-
-
+    <div className={`${bgClass} transition-colors duration-500 overflow-hidden`}>
+      <main
+        className="w-full px-4 md:px-20 mb-5 md:mb-0 pt-20 pb-8 flex flex-col md:flex-row items-center justify-between min-h-screen"
+        id="/"
+      >
         {/* Texte à gauche */}
         <div className="text-center md:text-left w-full md:w-1/2">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
             <motion.span
-              className={darkMode ? "block text-black" : "block text-white"}
+              className={`block ${textClass}`}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
             >
-              Hello, I am <span className="text-blue-500">Yoann</span>
+              Hello, je suis <span className="text-blue-500">Yoann</span>
             </motion.span>
 
             <span className="text-blue-500 block mt-2 text-2xl sm:text-3xl md:text-4xl">
@@ -60,9 +51,7 @@ const Home = () => {
           </h1>
 
           <p
-            className={`mt-6 text-base sm:text-lg md:text-xl max-w-xl mx-auto md:mx-0 ${
-              darkMode ? "text-black" : "text-white"
-            }`}
+            className={`mt-6 text-base sm:text-lg md:text-xl max-w-xl mx-auto md:mx-0 ${subTextClass}`}
           >
             Je suis développeur front-end/full-stack. Je travaille actuellement
             chez Electro dépôt en tant que développeur front-end.
@@ -70,18 +59,18 @@ const Home = () => {
 
           {/* Réseaux sociaux */}
           <div className="flex justify-center md:justify-start mt-8 gap-5">
-            {contactLinks.map((el, index) => (
+            {networkLinks(darkMode).map((el, index) => (
               <a
                 key={index}
                 href={el.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-transform hover:scale-125"
+                className="transition-transform hover:scale-125 hover:drop-shadow-[0_0_5px_rgba(59,130,246,0.7)]"
               >
                 <img
                   alt={el.name}
-                  src={el.url}
-                  className="w-6 h-6 sm:w-8 sm:h-8"
+                  src={el.icon}
+                  className="w-6 h-6 sm:w-8 sm:h-8 transition duration-200"
                 />
               </a>
             ))}

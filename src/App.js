@@ -7,6 +7,7 @@ import Parcours from "./views/Parcours";
 import Project from "./views/Projects";
 import LoadingScreen from "./Components/LoadingScreen";
 import { ThemeProvider } from "./themeProvider";
+import Contact from "./views/Contact";
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -26,6 +27,7 @@ function App() {
             <Technologie />
             <Parcours />
             <Project/>
+            <Contact/>
           </div>
 
         ) : (
