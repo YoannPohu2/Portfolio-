@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import heroBg from "../assets/webdev.svg";
 import Typewriter from "typewriter-effect";
-import { networkLinks } from "../network"; // ou "../constants/network" selon ton dossier
+import { networkLinks } from "../network";
 import { ThemeContext } from "../themeProvider";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
