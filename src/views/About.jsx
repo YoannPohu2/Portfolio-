@@ -30,7 +30,7 @@ const About = () => {
             <span className="text-blue-500">A propos</span>
           </h2>
           <p className={`text-lg mb-6 leading-relaxed ${textClass}`}>
-            Hey! Je m'appelle <strong>Yoann Pohu</strong>, j'ai 22 ans et je suis passionné par l'informatique depuis mon plus jeune âge.
+            Hello! Je m'appelle <strong>Yoann Pohu</strong>, j'ai 22 ans et je suis passionné par l'informatique depuis mon plus jeune âge.
             Aujourd'hui, je suis développeur web en alternance chez Electro Dépôt, dans ma deuxième année d’études.
           </p>
           <p className={`text-lg mb-6 leading-relaxed ${textClass}`}>
@@ -38,7 +38,7 @@ const About = () => {
             pour créer des interfaces web et mobiles performantes, tout en m’intéressant à l’open source et au développement full-stack.
           </p>
           <p className={`text-lg leading-relaxed ${textClass}`}>
-            Quand je ne code pas, j’aime jouer avec mes amis, regarder des séries sur Netflix, ou profiter du beau temps pour faire du skate ou jouer au basket 🏀.
+            Quand je ne code pas, j’aime jouer avec mes amis, regarder des séries sur Netflix, ou profiter du beau temps pour faire du skate ou jouer au basket.
           </p>
         </div>
       </div>
